@@ -9,7 +9,7 @@ from ticketstatus.models import TicketStatus
 class HistoricoTicket(models.Model):
     ticketId: Tickets = models.ForeignKey(Tickets, on_delete=models.CASCADE)
     usuario_alteracao: Usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    ultima_aletracao = models.DateField(max_length=20)
+    ultima_alteracao = models.DateField(max_length=20)
     usuario_solicitado: Usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     estatus: TicketStatus = models.ForeignKey(TicketStatus, on_delete=models.CASCADE)
 
